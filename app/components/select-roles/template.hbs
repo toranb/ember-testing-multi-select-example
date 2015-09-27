@@ -1,0 +1,5 @@
+<select class="detail-role form-control" onchange={{action (action "changed" user) value="target.value"}} multiple="multiple">
+  {{#each roles as |role|}}
+    <option value={{role.id}} selected={{in-list role.id local_role_list}}>{{role.name}}</option>
+  {{/each}}
+</select>
